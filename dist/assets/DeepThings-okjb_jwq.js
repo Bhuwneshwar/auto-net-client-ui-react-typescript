@@ -1,1 +1,0 @@
-import{j as s}from"./index-DhLjg7ZU.js";const t="/assets/auto-net%20formula-Cp-tg-R7.png",i=()=>s.jsxs("div",{children:[s.jsx("h2",{children:"Deep Understanding Let's start"}),s.jsx("p",{children:"analyze this image"}),s.jsx("img",{src:t,alt:"img",width:"100%"})]});export{i as default};

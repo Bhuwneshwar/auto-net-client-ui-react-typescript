@@ -1,1 +1,0 @@
-import{e as r,i as t,j as a}from"./index-DhLjg7ZU.js";var e={},u=t;Object.defineProperty(e,"__esModule",{value:!0});var o=e.default=void 0,d=u(r()),i=a;o=e.default=(0,d.default)((0,i.jsx)("path",{d:"M2.01 21 23 12 2.01 3 2 10l15 2-15 2z"}),"Send");export{o as d};

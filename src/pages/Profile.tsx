@@ -10,6 +10,12 @@ import PriorityDragable from "../components/PriorityDragable";
 import { Link } from "react-router-dom";
 import { IPlan } from "./Signup";
 
+let hostUrl = import.meta.env.VITE_HOST_URL;
+const production = import.meta.env.PROD;
+const devUrl = import.meta.env.VITE_DEV_URL;
+
+hostUrl = production ? hostUrl : devUrl;
+
 // interface EditToggle {
 //   name: boolean;
 //   email: boolean;
@@ -616,16 +622,17 @@ const Profile: React.FC = () => {
         toast.success("Auto-Net card generated successfully for 1 minutes!", {
           position: "bottom-center",
         });
-        const protocol = window.location.protocol;
-        const hostUrl =
-          protocol +
-          "//" +
-          window.location.hostname +
-          ":" +
-          data.port +
-          data.path;
-        console.log({ hostUrl, protocol });
+        // const protocol = window.location.protocol;
+        // const hostUrl =
+        //   protocol +
+        //   "//" +
+        //   window.location.hostname +
+        //   ":" +
+        //   data.port +
+        //   data.path;
+        // console.log({ hostUrl, protocol });
 
+        const pdfLink = data.path;
         window.open(hostUrl, "_blank");
       }
       if (data.error) {

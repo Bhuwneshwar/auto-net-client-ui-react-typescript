@@ -7,6 +7,13 @@ import {
 } from "react";
 import { io, Socket } from "socket.io-client";
 
+const env = import.meta.env;
+console.log({ env });
+
+let hostUrl = import.meta.env.VITE_HOST_URL;
+const production = import.meta.env.PROD;
+const devUrl = import.meta.env.VITE_DEV_URL;
+
 interface SocketProviderProps {
   children: ReactNode;
 }
@@ -19,7 +26,10 @@ export const SocketProvider = ({ children }: SocketProviderProps) => {
   const socket = useMemo(() => {
     // const protocol = window.location.protocol;
     // const hostUrl = protocol + "//" + window.location.hostname + ":5000";
-    const hostUrl = "https://rebyb-autonet.onrender.com/";
+
+    hostUrl = production ? hostUrl : devUrl;
+
+    // const hostUrl = "https://rebyb-autonet.onrender.com/";
     console.log({ hostUrl });
 
     // return io("http://localhost:5000", {
