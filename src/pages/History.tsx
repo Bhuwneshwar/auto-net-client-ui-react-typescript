@@ -182,6 +182,8 @@ const History = () => {
                   <AccountBalanceWalletIcon />
                 ) : obj.from === "bank" ? (
                   <AccountBalanceIcon />
+                ) : obj.from === "account" ? (
+                  <AccountBalanceIcon />
                 ) : (
                   obj.from
                 )}

@@ -632,8 +632,8 @@ const Profile: React.FC = () => {
         //   data.path;
         // console.log({ hostUrl, protocol });
 
-        const pdfLink = data.path;
-        window.open(hostUrl, "_blank");
+        const pdfLink = data.url;
+        window.open(pdfLink, "_blank");
       }
       if (data.error) {
         toast.error(data.error, {

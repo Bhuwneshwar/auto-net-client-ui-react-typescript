@@ -3,9 +3,8 @@ import GridViewRoundedIcon from "@mui/icons-material/GridViewRounded";
 // import HouseRoundedIcon from "@mui/icons-material/HouseRounded";
 import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
-import ShareIcon from "@mui/icons-material/Share";
 import LockOpenRoundedIcon from "@mui/icons-material/LockOpenRounded";
-// import SwapVertIcon from "@mui/icons-material/SwapVert";
+import SwapVertIcon from "@mui/icons-material/SwapVert";
 import { makeProfilePic } from "../utils/functions";
 import { useState, useEffect } from "react";
 import { useGlobalContext } from "../MyRedux";
@@ -48,7 +47,7 @@ const HeaderContent: React.FC = () => {
           >
             <QrCodeScannerIcon />
           </Link>
-          {/* <Link
+          <Link
             className={
               pathname.includes("/history") ? "msgIcon active" : "msgIcon"
             }
@@ -63,7 +62,7 @@ const HeaderContent: React.FC = () => {
                   : "99+"}
               </span>
             )}
-          </Link> */}
+          </Link>
           <Link
             className={
               pathname.includes("/messages") ? "msgIcon active" : "msgIcon"
@@ -89,13 +88,13 @@ const HeaderContent: React.FC = () => {
           </Link>
         </>
       )}
-      <Link
+      {/* <Link
         title="Share with Referral link"
         className={pathname.includes("/share") ? "active" : ""}
         to={"/share"}
       >
         <ShareIcon />
-      </Link>
+      </Link> */}
       {!MyDetails && (
         <Link
           className={pathname.includes("/login") ? "active" : ""}

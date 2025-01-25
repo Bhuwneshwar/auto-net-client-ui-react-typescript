@@ -270,11 +270,11 @@ header #logoAnimation div:nth-child(3) div {
 }
 
 header #logoAnimation:hover div:nth-child(1) div {
-  width: 5rem;
+  width: 5.2rem;
 }
 
 header #logoAnimation:hover div:nth-child(3) div {
-  width: 9rem;
+  width: 10.2rem;
 }
 
 a #fundLogo {

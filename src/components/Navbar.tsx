@@ -9,6 +9,8 @@ import GridViewRoundedIcon from "@mui/icons-material/GridViewRounded";
 import HouseRoundedIcon from "@mui/icons-material/HouseRounded";
 import LockOpenRoundedIcon from "@mui/icons-material/LockOpenRounded";
 // import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
+import ShareIcon from "@mui/icons-material/Share";
+
 import SwapVertIcon from "@mui/icons-material/SwapVert";
 import PasswordIcon from "@mui/icons-material/Password";
 const Navbar = () => {
@@ -28,6 +30,12 @@ const Navbar = () => {
           <Link to="/home">
             <HouseRoundedIcon />
             Home
+          </Link>
+        </li>
+        <li>
+          <Link to="/share">
+            <ShareIcon />
+            Share referral link
           </Link>
         </li>
 

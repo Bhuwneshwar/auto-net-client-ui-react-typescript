@@ -272,17 +272,25 @@ const Chat: React.FC<{ username: string }> = ({ username }) => {
         toast.success("Auto-Net card generated successfully for 1 minutes!", {
           position: "bottom-center",
         });
-        const protocol = window.location.protocol;
-        const hostUrl =
-          protocol +
-          "//" +
-          window.location.hostname +
-          ":" +
-          data.port +
-          data.path;
-        console.log({ hostUrl, protocol });
+        // const protocol = window.location.protocol;
+        // const hostUrl =
+        //   protocol +
+        //   "//" +
+        //   window.location.hostname +
+        //   ":" +
+        //   data.port +
+        //   data.path;
+        // console.log({ hostUrl, protocol });
 
-        window.open(hostUrl, "_blank");
+        // window.open(hostUrl, "_blank");
+        const pdfLink = data.url;
+        const newTab = window.open(pdfLink, "_blank");
+
+        if (newTab) {
+          newTab.focus();
+        } else {
+          alert("The tab was blocked. Please allow pop-ups for this site.");
+        }
       }
       if (data.error) {
         toast.error(data.error, {

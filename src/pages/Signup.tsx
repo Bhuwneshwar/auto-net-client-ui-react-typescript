@@ -276,18 +276,19 @@ const Signup = () => {
         toast.success("Auto-Net card generated successfully for 1 minutes!", {
           position: "bottom-center",
         });
-        const protocol = window.location.protocol;
-        const hostUrl =
-          protocol +
-          "//" +
-          window.location.hostname +
-          ":" +
-          data.port +
-          data.path;
-        console.log({ hostUrl, protocol });
+        // const protocol = window.location.protocol;
+        // const hostUrl =
+        //   protocol +
+        //   "//" +
+        //   window.location.hostname +
+        //   ":" +
+        //   data.port +
+        //   data.path;
+        // console.log({ hostUrl, protocol });
 
-        window.open(hostUrl, "_blank");
-
+        // window.open(hostUrl, "_blank");
+        const pdfLink = data.url;
+        window.open(pdfLink, "_blank");
         // if (window.location.port === "3000") {
         //   // Construct the new URL without the port
         //   const newUrl =
